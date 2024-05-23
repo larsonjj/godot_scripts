@@ -19,6 +19,6 @@ Add one of the themes in the `theme` folder within Editor settings.
 - Main Font: `fonts/Inter/static/Inter-Regular.ttf`
 - Main Font Bold: `fonts/Inter/static/Inter-Bold.ttf`
 - Code Font: `fonts/JetbrainsMono/JetBrainsMonoNerdFontMono-Regular.ttf`
-- Spacing: `Compact`
+- Spacing Preset: `Compact`
 
 [def]: ./screenshot.png
