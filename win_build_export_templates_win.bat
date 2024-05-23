@@ -9,16 +9,18 @@ set "OUTPUT_DIR=%CURRENT_DIR%\build"
 cd /d "%GODOT_SOURCE_DIR%"
 
 :: Release
-scons profile="%CUSTOM_PROFILE%" platform=windows arch=arm64 tools=no target=template_release optimize=speed lto=full threads=yes
 scons profile="%CUSTOM_PROFILE%" platform=windows arch=x86_64 tools=no target=template_release optimize=speed lto=full threads=yes
 
 :: Debug
-scons profile="%CUSTOM_PROFILE%" platform=windows arch=arm64 tools=no target=template_debug optimize=speed lto=none threads=yes
 scons profile="%CUSTOM_PROFILE%" platform=windows arch=x86_64 tools=no target=template_debug optimize=speed lto=none threads=yes
+
+:: Remove unnecessary files
+del /Q /F bin\*.exp bin\*.lib bin\*.pdb
 
 :: Move to export template folder
 if not exist "%OUTPUT_DIR%\export_templates" mkdir "%OUTPUT_DIR%\export_templates"
-copy bin\godot_windows.zip "%OUTPUT_DIR%\export_templates\windows.zip"
+
+xcopy /Y /I bin\godot.windows.*.exe "%OUTPUT_DIR%\export_templates\"
 
 :: Return to original directory
 cd /d "%CURRENT_DIR%"
