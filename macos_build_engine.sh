@@ -6,7 +6,7 @@ OUTPUT_DIR="$CURRENT_DIR/build"
 
 cd $GODOT_SOURCE_DIR
 
-scons platform=macos arch=arm64 vulkan_sdk_path="~/VulkanSDK" tools=yes target=editor
+scons platform=macos arch=arm64 tools=yes target=editor
 
 cp -r misc/dist/macos_tools.app/* $OUTPUT_DIR/Godot.app
 mkdir -p $OUTPUT_DIR/Godot.app/Contents/MacOS
