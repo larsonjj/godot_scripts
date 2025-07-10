@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Ensure Apple Clang is used
+export PATH="/usr/bin:$PATH"
+
 CURRENT_DIR=$(pwd)
 GODOT_SOURCE_DIR="$HOME/godot"
 OUTPUT_DIR="$CURRENT_DIR/build"

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Ensure Apple Clang is used
+export PATH="/usr/bin:$PATH"
+
 CURRENT_DIR=$(pwd)
 CUSTOM_PROFILE="$CURRENT_DIR/custom_2d.py"
 GODOT_SOURCE_DIR="$HOME/godot"
