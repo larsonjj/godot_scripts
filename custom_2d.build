@@ -1,23 +1,26 @@
 {
 	"disabled_build_options": {
 		"brotli": false,
+		"d3d12": false,
 		"disable_3d": true,
 		"disable_navigation_3d": true,
 		"disable_physics_3d": true,
 		"disable_xr": true,
 		"forward_mobile_renderer": false,
 		"forward_plus_renderer": false,
+		"metal": false,
 		"module_godot_physics_3d_enabled": false,
 		"module_jolt_physics_enabled": false,
 		"module_openxr_enabled": false,
-		"module_text_server_adv_enabled": true
+		"rendering_device": false,
+		"vulkan": false
 	},
 	"disabled_classes": [
 		"Curve3D",
 		"NavigationAgent3D",
 		"Node3D",
+		"Shape3D",
 		"World3D",
-    "Shape3D",
 		"WorldEnvironment"
 	],
 	"type": "build_profile"
