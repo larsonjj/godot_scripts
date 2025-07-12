@@ -1,4 +1,5 @@
 disable_3d = "yes"
+disable_xr = "yes"
 module_text_server_adv_enabled = "no"
 module_text_server_fb_enabled = "yes"
 disable_advanced_gui = "yes"

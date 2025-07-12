@@ -11,5 +11,5 @@ fi
 
 echo "Optimizing Web Build in $WEB_BUILD_DIR"
 
-wasm-opt $WEB_BUILD_DIR/index.wasm -o index.wasm -all --post-emscripten -Oz
+wasm-opt $WEB_BUILD_DIR/index.wasm -o $WEB_BUILD_DIR/index.wasm -all --post-emscripten -Oz
 brotli $WEB_BUILD_DIR/index.wasm $WEB_BUILD_DIR/index.html $WEB_BUILD_DIR/index.js $WEB_BUILD_DIR/index.audio.worklet.js -f
