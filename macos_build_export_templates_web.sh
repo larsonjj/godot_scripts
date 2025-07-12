@@ -5,22 +5,23 @@ export PATH="/usr/bin:$PATH"
 
 CURRENT_DIR=$(pwd)
 CUSTOM_PROFILE="$CURRENT_DIR/custom_2d.py"
+CUSTOM_BUILD_PROFILE="$CURRENT_DIR/custom_2d.profile"
 GODOT_SOURCE_DIR="$HOME/godot"
 OUTPUT_DIR="$CURRENT_DIR/build"
 
 cd $GODOT_SOURCE_DIR
 
 # Release
-scons profile=$CUSTOM_PROFILE platform=web target=template_release tools=no javascript_eval=no use_volk=no vulkan=no debug_symbols=no optimize=size lto=full threads=no linkflags="-Wl,-u,htonl"
-scons profile=$CUSTOM_PROFILE platform=web target=template_release dlink_enabled=yes tools=no javascript_eval=no use_volk=no vulkan=no debug_symbols=no optimize=size lto=full threads=no linkflags="-Wl,-u,htonl"
-scons profile=$CUSTOM_PROFILE platform=web target=template_release tools=no javascript_eval=no use_volk=no vulkan=no debug_symbols=no optimize=size lto=full threads=yes linkflags="-Wl,-u,htonl"
-scons profile=$CUSTOM_PROFILE platform=web target=template_release dlink_enabled=yes tools=no javascript_eval=no use_volk=no vulkan=no debug_symbols=no optimize=size lto=full threads=yes linkflags="-Wl,-u,htonl"
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=web target=template_release tools=no javascript_eval=no use_volk=no vulkan=no debug_symbols=no optimize=size lto=full threads=no linkflags="-Wl,-u,htonl"
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=web target=template_release dlink_enabled=yes tools=no javascript_eval=no use_volk=no vulkan=no debug_symbols=no optimize=size lto=full threads=no linkflags="-Wl,-u,htonl"
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=web target=template_release tools=no javascript_eval=no use_volk=no vulkan=no debug_symbols=no optimize=size lto=full threads=yes linkflags="-Wl,-u,htonl"
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=web target=template_release dlink_enabled=yes tools=no javascript_eval=no use_volk=no vulkan=no debug_symbols=no optimize=size lto=full threads=yes linkflags="-Wl,-u,htonl"
 
 # Debug
-scons profile=$CUSTOM_PROFILE platform=web target=template_debug tools=no javascript_eval=no use_volk=no vulkan=no optimize=size lto=none threads=no linkflags="-Wl,-u,htonl"
-scons profile=$CUSTOM_PROFILE platform=web target=template_debug dlink_enabled=yes tools=no javascript_eval=no use_volk=no vulkan=no optimize=size lto=none threads=no linkflags="-Wl,-u,htonl"
-scons profile=$CUSTOM_PROFILE platform=web target=template_debug tools=no javascript_eval=no use_volk=no vulkan=no optimize=size lto=none threads=yes linkflags="-Wl,-u,htonl"
-scons profile=$CUSTOM_PROFILE platform=web target=template_debug dlink_enabled=yes tools=no javascript_eval=no use_volk=no vulkan=no optimize=size lto=none threads=yes linkflags="-Wl,-u,htonl"
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=web target=template_debug tools=no javascript_eval=no use_volk=no vulkan=no optimize=size lto=none threads=no linkflags="-Wl,-u,htonl"
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=web target=template_debug dlink_enabled=yes tools=no javascript_eval=no use_volk=no vulkan=no optimize=size lto=none threads=no linkflags="-Wl,-u,htonl"
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=web target=template_debug tools=no javascript_eval=no use_volk=no vulkan=no optimize=size lto=none threads=yes linkflags="-Wl,-u,htonl"
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=web target=template_debug dlink_enabled=yes tools=no javascript_eval=no use_volk=no vulkan=no optimize=size lto=none threads=yes linkflags="-Wl,-u,htonl"
 
 # Move to export template folder
 mkdir -p $OUTPUT_DIR/export_templates

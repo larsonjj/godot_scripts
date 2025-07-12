@@ -6,10 +6,11 @@ export PATH="/usr/bin:$PATH"
 CURRENT_DIR=$(pwd)
 GODOT_SOURCE_DIR="$HOME/godot"
 OUTPUT_DIR="$CURRENT_DIR/build"
+CUSTOM_BUILD_PROFILE="$CURRENT_DIR/custom_2d.profile"
 
 cd $GODOT_SOURCE_DIR
 
-scons platform=macos arch=arm64 tools=yes target=editor
+scons platform=macos arch=arm64 tools=yes target=editor build_profile=$CUSTOM_BUILD_PROFILE
 
 cp -r misc/dist/macos_tools.app/* $OUTPUT_DIR/Godot.app
 mkdir -p $OUTPUT_DIR/Godot.app/Contents/MacOS
