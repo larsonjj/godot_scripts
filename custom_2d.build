@@ -10,7 +10,7 @@
 		"module_godot_physics_3d_enabled": false,
 		"module_jolt_physics_enabled": false,
 		"module_openxr_enabled": false,
-		"module_text_server_adv_enabled": false
+		"module_text_server_adv_enabled": true
 	},
 	"disabled_classes": [
 		"Curve3D",

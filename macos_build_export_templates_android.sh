@@ -7,7 +7,10 @@ CURRENT_DIR=$(pwd)
 CUSTOM_PROFILE="$CURRENT_DIR/custom_2d.py"
 CUSTOM_BUILD_PROFILE="$CURRENT_DIR/custom_2d.profile"
 GODOT_SOURCE_DIR="$HOME/godot"
-OUTPUT_DIR="$CURRENT_DIR/build"
+GODOT_VERSION="4.5.beta"
+GODOT_APP_DIR="$HOME/Library/Application Support/Godot"
+OUTPUT_DIR="$GODOT_APP_DIR/export_templates/$GODOT_VERSION"
+
 
 # Function to download latest godot-swappy release
 download_godot_swappy() {
@@ -103,10 +106,10 @@ scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=andro
 scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=android arch=arm64 generate_apk=yes tools=no target=template_debug optimize=speed lto=none threads=yes
 
 # Move to export template folder
-mkdir -p $OUTPUT_DIR/export_templates
-cp bin/android_debug.apk $OUTPUT_DIR/export_templates/android_debug.apk
-cp bin/android_release.apk $OUTPUT_DIR/export_templates/android_release.apk
-cp bin/android_source.zip $OUTPUT_DIR/export_templates/android_source.zip
+mkdir -p "$OUTPUT_DIR"
+cp bin/android_debug.apk "$OUTPUT_DIR/android_debug.apk"
+cp bin/android_release.apk "$OUTPUT_DIR/android_release.apk"
+cp bin/android_source.zip "$OUTPUT_DIR/android_source.zip"
 
 # Return to original directory
 cd $CURRENT_DIR

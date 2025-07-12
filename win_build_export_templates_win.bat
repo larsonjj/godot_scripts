@@ -5,7 +5,9 @@ set "CURRENT_DIR=%cd%"
 set "CUSTOM_PROFILE=%CURRENT_DIR%\custom_2d.py"
 set "CUSTOM_BUILD_PROFILE=%CURRENT_DIR%\custom_2d.profile"
 set "GODOT_SOURCE_DIR=%USERPROFILE%\godot"
-set "OUTPUT_DIR=%CURRENT_DIR%\build"
+set "GODOT_VERSION=4.5.beta"
+set "GODOT_APP_DIR=%APPDATA%\Roaming\Godot\filename"
+set "OUTPUT_DIR=%GODOT_APP_DIR%/export_templates/%GODOT_VERSION%"
 
 cd /d "%GODOT_SOURCE_DIR%"
 

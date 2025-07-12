@@ -7,7 +7,10 @@ CURRENT_DIR=$(pwd)
 CUSTOM_PROFILE="$CURRENT_DIR/custom_2d.py"
 CUSTOM_BUILD_PROFILE="$CURRENT_DIR/custom_2d.profile"
 GODOT_SOURCE_DIR="$HOME/godot"
-OUTPUT_DIR="$CURRENT_DIR/build"
+GODOT_VERSION="4.5.beta"
+GODOT_APP_DIR="$HOME/Library/Application Support/Godot"
+OUTPUT_DIR="$GODOT_APP_DIR/export_templates/$GODOT_VERSION"
+
 
 cd $GODOT_SOURCE_DIR
 
@@ -24,15 +27,15 @@ scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=web t
 scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=web target=template_debug dlink_enabled=yes tools=no javascript_eval=no use_volk=no vulkan=no optimize=size lto=none threads=yes linkflags="-Wl,-u,htonl"
 
 # Move to export template folder
-mkdir -p $OUTPUT_DIR/export_templates
-cp bin/godot.web.template_debug.wasm32.zip $OUTPUT_DIR/export_templates/web_debug.zip
-cp bin/godot.web.template_debug.wasm32.dlink.zip $OUTPUT_DIR/export_templates/web_dlink_debug.zip
-cp bin/godot.web.template_debug.wasm32.nothreads.zip $OUTPUT_DIR/export_templates/web_nothreads_debug.zip
-cp bin/godot.web.template_debug.wasm32.nothreads.dlink.zip $OUTPUT_DIR/export_templates/web_dlink_nothreads_debug.zip
-cp bin/godot.web.template_release.wasm32.zip $OUTPUT_DIR/export_templates/web_release.zip
-cp bin/godot.web.template_release.wasm32.dlink.zip $OUTPUT_DIR/export_templates/web_dlink_release.zip
-cp bin/godot.web.template_release.wasm32.nothreads.zip $OUTPUT_DIR/export_templates/web_nothreads_release.zip
-cp bin/godot.web.template_release.wasm32.nothreads.dlink.zip $OUTPUT_DIR/export_templates/web_dlink_nothreads_release.zip
+mkdir -p "$OUTPUT_DIR"
+cp bin/godot.web.template_debug.wasm32.zip "$OUTPUT_DIR/web_debug.zip"
+cp bin/godot.web.template_debug.wasm32.dlink.zip "$OUTPUT_DIR/web_dlink_debug.zip"
+cp bin/godot.web.template_debug.wasm32.nothreads.zip "$OUTPUT_DIR/web_nothreads_debug.zip"
+cp bin/godot.web.template_debug.wasm32.nothreads.dlink.zip "$OUTPUT_DIR/web_dlink_nothreads_debug.zip"
+cp bin/godot.web.template_release.wasm32.zip "$OUTPUT_DIR/web_release.zip"
+cp bin/godot.web.template_release.wasm32.dlink.zip "$OUTPUT_DIR/web_dlink_release.zip"
+cp bin/godot.web.template_release.wasm32.nothreads.zip "$OUTPUT_DIR/web_nothreads_release.zip"
+cp bin/godot.web.template_release.wasm32.nothreads.dlink.zip "$OUTPUT_DIR/web_dlink_nothreads_release.zip"
 
 # Return to original directory
-cd $CURRENT_DIR
+cd "$CURRENT_DIR"
