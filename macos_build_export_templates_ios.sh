@@ -15,9 +15,9 @@ OUTPUT_DIR="$GODOT_APP_DIR/export_templates/$GODOT_VERSION"
 cd $GODOT_SOURCE_DIR
 
 # Release
-scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=ios arch=arm64 tools=no target=template_release debug_symbols=no use_volk=no vulkan=no optimize=speed lto=full threads=yes
-scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=ios ios_simulator=yes arch=arm64 tools=no target=template_release debug_symbols=no use_volk=no vulkan=no optimize=speed lto=full threads=yes
-scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=ios ios_simulator=yes arch=x86_64 tools=no target=template_release debug_symbols=no use_volk=no vulkan=no optimize=speed lto=full threads=yes
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=ios arch=arm64 tools=no production=yes target=template_release debug_symbols=no use_volk=no vulkan=no optimize=speed lto=full threads=yes
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=ios ios_simulator=yes arch=arm64 tools=no production=yes target=template_release debug_symbols=no use_volk=no vulkan=no optimize=speed lto=full threads=yes
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=ios ios_simulator=yes arch=x86_64 tools=no production=yes target=template_release debug_symbols=no use_volk=no vulkan=no optimize=speed lto=full threads=yes
 
 # Debug
 scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=ios arch=arm64 tools=no target=template_debug use_volk=no vulkan=no optimize=speed lto=none threads=yes

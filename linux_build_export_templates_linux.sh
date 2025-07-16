@@ -11,8 +11,8 @@ OUTPUT_DIR="$GODOT_APP_DIR/export_templates/$GODOT_VERSION"
 cd $GODOT_SOURCE_DIR
 
 # Release
-scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=linux arch=arm64 tools=no target=template_release optimize=speed lto=full threads=yes
-scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=linux arch=x86_64 tools=no target=template_release optimize=speed lto=full threads=yes
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=linux arch=arm64 tools=no production=yes target=template_release optimize=speed lto=full threads=yes
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=linux arch=x86_64 tools=no production=yes target=template_release optimize=speed lto=full threads=yes
 
 # Debug
 scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=linux arch=arm64 tools=no target=template_debug optimize=speed lto=none threads=yes

@@ -100,7 +100,7 @@ fi
 cd $GODOT_SOURCE_DIR
 
 # Release
-scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=android arch=arm64 generate_apk=yes tools=no debug_symbols=no target=template_release optimize=speed lto=full threads=yes
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=android arch=arm64 production=yes generate_apk=yes tools=no debug_symbols=no target=template_release optimize=speed lto=full threads=yes
 
 # Debug
 scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=android arch=arm64 generate_apk=yes tools=no target=template_debug optimize=speed lto=none threads=yes

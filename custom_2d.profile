@@ -4,7 +4,9 @@
 		"NavigationAgent3D",
 		"Node3D",
 		"World3D",
-    "Shape3D",
+    "Occluder3D",
+		"Shape3D",
+		"Texture3D",
 		"WorldEnvironment"
 	],
 	"disabled_editors": [],

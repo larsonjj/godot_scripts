@@ -19,7 +19,9 @@
 		"Curve3D",
 		"NavigationAgent3D",
 		"Node3D",
+		"Occluder3D",
 		"Shape3D",
+		"Texture3D",
 		"World3D",
 		"WorldEnvironment"
 	],
