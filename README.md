@@ -1,6 +1,6 @@
 # Overview
 
-MacOS scripts to modify the Godot game engine
+MacOS, Windows, and Linux scripts to build the Godot game engine as well as export templates for 2D projects with the aim of optimizing build times and file sizes by excluding unnecessarys features and modules.
 
 ## Screenshot
 
@@ -8,9 +8,9 @@ MacOS scripts to modify the Godot game engine
 
 ## Theme
 
-Add one of the themes in the `theme` folder within Editor settings.
+Add one of the themes in the `theme` folder within Editor settings.z
 
-***Recommended Settings***
+**_Recommended Settings_**
 
 - Base Color: `#252525`
 - Accent Color: `#569eff`
