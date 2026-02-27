@@ -8,10 +8,11 @@ GODOT_SOURCE_DIR="$HOME/godot"
 OUTPUT_DIR="$CURRENT_DIR/build"
 CUSTOM_BUILD_PROFILE="$CURRENT_DIR/custom_2d_editor.build"
 CUSTOM_EDITOR_PROFILE="$CURRENT_DIR/custom_2d.profile"
+CUSTOM_PROFILE="$CURRENT_DIR/custom_2d.py"  # Add this line
 
 cd $GODOT_SOURCE_DIR
 
-scons platform=macos arch=arm64 tools=yes target=editor production=yes build_profile=$CUSTOM_BUILD_PROFILE editor_build_profile=$CUSTOM_EDITOR_PROFILE
+scons profile=$CUSTOM_PROFILE platform=macos arch=arm64 tools=yes target=editor production=yes build_profile=$CUSTOM_BUILD_PROFILE editor_build_profile=$CUSTOM_EDITOR_PROFILE
 
 cp -r misc/dist/macos_tools.app/* $OUTPUT_DIR/Godot.app
 mkdir -p $OUTPUT_DIR/Godot.app/Contents/MacOS

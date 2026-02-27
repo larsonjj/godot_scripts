@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CURRENT_DIR=$(pwd)
-CUSTOM_PROFILE="$CURRENT_DIR/custom_2d.py"
+CUSTOM_PROFILE="$CURRENT_DIR/custom_2d_templates.py"
 CUSTOM_BUILD_PROFILE="$CURRENT_DIR/custom_2d_template.build"
 GODOT_SOURCE_DIR="$HOME/godot"
 GODOT_VERSION="4.6.1.stable"
@@ -11,8 +11,8 @@ OUTPUT_DIR="$GODOT_APP_DIR/export_templates/$GODOT_VERSION"
 cd $GODOT_SOURCE_DIR
 
 # Release
-scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=linux arch=arm64 tools=no production=yes target=template_release optimize=speed lto=full threads=yes
-scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=linux arch=x86_64 tools=no production=yes target=template_release optimize=speed lto=full threads=yes
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=linux arch=arm64 tools=no production=yes target=template_release optimize=speed lto=full threads=yes debug_symbols=no
+scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=linux arch=x86_64 tools=no production=yes target=template_release optimize=speed lto=full threads=yes debug_symbols=no
 
 # Debug
 scons profile=$CUSTOM_PROFILE build_profile=$CUSTOM_BUILD_PROFILE platform=linux arch=arm64 tools=no target=template_debug optimize=speed lto=none threads=yes

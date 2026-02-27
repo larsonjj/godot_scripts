@@ -1,4 +1,10 @@
-# Editor configs
+# Template-only flags (NOT allowed in editor builds)
+disable_3d = "yes"
+disable_advanced_gui = "yes"
+disable_physics_3d = "yes"
+disable_navigation_3d = "yes"
+
+# Shared settings - safe for both editor AND template builds
 disable_xr = "yes"
 deprecated = "no"
 module_openxr_enabled = "no"
