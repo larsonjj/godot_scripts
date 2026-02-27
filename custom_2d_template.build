@@ -1,4 +1,21 @@
 {
+	"disabled_build_options": {
+		"brotli": false,
+		"d3d12": false,
+		"disable_3d": true,
+		"disable_navigation_3d": true,
+		"disable_physics_3d": true,
+		"disable_xr": true,
+		"forward_mobile_renderer": false,
+		"forward_plus_renderer": false,
+		"metal": false,
+		"module_godot_physics_3d_enabled": false,
+		"module_jolt_physics_enabled": false,
+		"module_msdfgen_enabled": false,
+		"module_openxr_enabled": false,
+		"rendering_device": false,
+		"vulkan": false
+	},
 	"disabled_classes": [
 		"NavigationAgent3D",
 		"Node3D",
@@ -157,10 +174,5 @@
 		"ZIPPacker",
 		"ZIPReader"
 	],
-	"disabled_editors": [],
-	"disabled_features": [
-		"3d"
-	],
-	"disabled_properties": [],
-	"type": "feature_profile"
+	"type": "build_profile"
 }

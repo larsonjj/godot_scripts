@@ -3,7 +3,7 @@ setlocal
 
 set "CURRENT_DIR=%cd%"
 set "CUSTOM_PROFILE=%CURRENT_DIR%\custom_2d.py"
-set "CUSTOM_BUILD_PROFILE=%CURRENT_DIR%\custom_2d.profile"
+set "CUSTOM_BUILD_PROFILE=%CURRENT_DIR%\custom_2d_template.build"
 set "GODOT_SOURCE_DIR=%USERPROFILE%\godot"
 set "GODOT_VERSION=4.5.beta"
 set "GODOT_APP_DIR=%APPDATA%\Roaming\Godot\filename"

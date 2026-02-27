@@ -5,7 +5,7 @@ export PATH="/usr/bin:$PATH"
 
 CURRENT_DIR=$(pwd)
 CUSTOM_PROFILE="$CURRENT_DIR/custom_2d.py"
-CUSTOM_BUILD_PROFILE="$CURRENT_DIR/custom_2d.profile"
+CUSTOM_BUILD_PROFILE="$CURRENT_DIR/custom_2d_template.build"
 GODOT_SOURCE_DIR="$HOME/godot"
 GODOT_VERSION="4.5.beta"
 GODOT_APP_DIR="$HOME/Library/Application Support/Godot"
