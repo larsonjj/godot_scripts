@@ -4,7 +4,7 @@ CURRENT_DIR=$(pwd)
 CUSTOM_PROFILE="$CURRENT_DIR/custom_2d.py"
 CUSTOM_BUILD_PROFILE="$CURRENT_DIR/custom_2d_template.build"
 GODOT_SOURCE_DIR="$HOME/godot"
-GODOT_VERSION="4.5.beta"
+GODOT_VERSION="4.6.1"
 GODOT_APP_DIR="$HOME/.config/Godot/filename"
 OUTPUT_DIR="$GODOT_APP_DIR/export_templates/$GODOT_VERSION"
 
