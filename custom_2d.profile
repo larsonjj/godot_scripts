@@ -7,7 +7,6 @@
         "GPUParticles3D",
         "GridMap",
         "Light3D",
-        "Mesh",
         "MeshInstance3D",
         "Node3D",
         "OmniLight3D",
